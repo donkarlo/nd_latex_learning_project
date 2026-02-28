@@ -1,0 +1,22 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{multirow}
+
+\title{Document inclusion}
+\date{}
+\begin{document}
+    \maketitle
+    \section{including}
+        Just can be direct child of document node and clears page before and after
+        \begin{minted}{latex}
+            \include{"path_to_file"}
+        \end{minted}
+    \section{inputting}
+        Can be used anywhere even inside teh paragraf and it is exactly as pasting.
+        \begin{minted}{latex}
+            \input{"path_to_file"}
+        \end{minted}
+\end{document}
