@@ -1,0 +1,58 @@
+\documentclass[a4paper]{article}
+\usepackage{forest}% this alone without tikz and etc is enough for simple forest
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+
+\title{Forest}
+\date{}
+
+\begin{document}
+    \maketitle
+    
+    \section{Simple hierarchy}
+    
+    
+    
+    \section{Out of hierarchy relation with \texttt{tikz+=}}
+    
+    \begin{forest}
+        for tree={
+            draw,
+            rounded corners,
+            edge={->}
+        },
+        tikz+={
+            \draw[dashed,->] (conA.east) to[bend left=15] (selfconA.west);
+        }
+        [Robot, name=robotA
+            [Mind, name=mindA
+                [Consciousness, name=conA]
+                [Self-Consciousness, name=selfconA]
+            ]
+        ]
+    \end{forest}
+    
+    \vspace{1cm}
+    
+    \section{Out of hierarchy relation with \texttt{remember picture}}
+    
+    \begin{forest}
+        for tree={
+            draw,
+            rounded corners,
+            edge={->}
+        },
+        remember picture
+        [Robot, name=robotB
+            [Mind, name=mindB
+                [Consciousness, name=conB]
+                [Self-Consciousness, name=selfconB]
+            ]
+        ]
+    \end{forest}
+    
+    \begin{tikzpicture}[overlay, remember picture]
+        \draw[dashed,->] (conB.east) to[bend left=15] (selfconB.west);
+    \end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{graphs,graphdrawing,arrows.meta,shapes.geometric}
+\usegdlibrary{force}
+
+\begin{document}
+    more connected nodes are placed near each other
+    \\
+    \\
+    \\
+    \begin{tikzpicture}[>=Stealth, nodes={draw,shape=ellipse,inner sep=1pt}]
+    \graph [spring layout, node distance=1.5cm] {
+        Ax -> {B, D, E};
+        B -> C;
+        D -> {C, Ex, F};
+        Cc -> Fc;
+        E -> Fcc;
+    };
+    \end{tikzpicture}
+
+\end{document}

@@ -1,43 +1,40 @@
-# --- Python build/artifacts ---
-__pycache__/
-*.py[cod]
-*$py.class
-.dist-info/
-.eggs/
-*.egg
-*.egg-info/
-build/
-dist/
+# Environment files
+**/.env
+**/.env.*
 
-# --- Virtual envs ---
-.venv/
-venv/
-env/
-ENV/
+# Python
+**/.venv/
+**/__pycache__/
+**/*.pyc
+**/*.py[cod]
+**/*$py.class
+src/*.egg-info/
 
-# --- Jupyter ---
-**/.ipynb_checkpoints/
+# Python caches
+**/.mypy_cache/
+**/.pytest_cache/
 
+# PyCharm
+**/.idea/
 
-# --- PyCharm / IntelliJ ---
-.idea/
+# LaTeX cache
+**/.livelatex-cache/
 
-# --- Test & tooling caches ---
-.pytest_cache/
-.mypy_cache/
-.tox/
-.coverage
-coverage.xml
+# LaTeX auxiliary files
+**/*.aux
+**/*.log
+**/*.out
+**/*.gz
 
-# --- OS noise ---
-.DS_Store
-Thumbs.db
+# Graphviz generated files
+**/*.dot
 
-# --- Dotenv / local configs ---
-*.env
-.env
-.envrc
+# Generated PDFs
+**/*.pdf
 
-#
-out/
-dist/
+# Root directories
+/out/
+/data/
+/dist/
+/configs/
+/config/

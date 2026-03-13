@@ -1,7 +1,19 @@
-\documentclass{book}
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
 \usepackage{tikz}
-\usetikzlibrary{positioning,arrows.meta,fit}
+
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/language/formal/computer/programming/tex/composition/control_sequence/kind/tag/tag.tex}
+
+\title{}
+\date{}
+
 \begin{document}
+    \maketitle
     \begin{tikzpicture}[
         box/.style={draw, rounded corners, align=center, inner sep=6pt},
         >=Stealth]
@@ -13,4 +25,6 @@
         \draw[->] (features) -- (model);
         \draw[->] (model) -- (novel);
     \end{tikzpicture}
+    % \bibliographystyle{plain}
+    % \bibliography{/home/donkarlo/Dropbox/repo/shared_research/bibliography/bibliography.bib}
 \end{document}

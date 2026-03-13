@@ -1,0 +1,30 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{forest}
+
+\title{}
+\date{}
+
+\begin{document}
+    \maketitle
+    \begin{forest}
+        for tree={
+            draw,%remove thmis if you dont need the rectangle around the nodes
+            edge={->}% remove this, if you don't need the flashes and you need just straight lines
+        }
+        [Robot
+            [Mind
+                [Meta Cognition
+                    [Self-awareness]
+                ]
+            ]
+        ]
+    \end{forest}
+    % \bibliographystyle{plain}
+    % \bibliography{/home/donkarlo/Dropbox/repo/shared_research/bibliography/bibliography.bib}
+\end{document}

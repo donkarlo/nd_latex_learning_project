@@ -1,0 +1,51 @@
+
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage[pdf]{graphviz}
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/language/formal/computer/programming/tex/composition/control_sequence/kind/tag/tag.tex}
+
+\title{}
+\date{}
+
+\begin{document}
+    \maketitle
+    \section{Before running}
+          The run engine must be on LuaLatex document class must not be standalone.
+        
+        \begin{itemize}
+            \item In pycharm, right click on the page that contains the graph and from ``Modify run configuration`` change output directory from {{projectDir}/out} to {mainFileParent}.
+            \item The graphname must not contain any underlines
+            \item Two part words must be put in double quatations
+        \end{itemize}
+    \section{Simplest example}
+        examplegraphname is the graph name and it must not contain any underlines
+        \digraph{examplegraphname}{
+            rankdir=TB;
+            robot -> mind -> "met cognition "-> cognition -> process -> memory -> longterm;
+            robot -> body -> sensor;
+            memory -> sensor -> mind;
+            cognition -> body;
+        }
+    
+    \section{Multi line labels}
+        \digraph{selfawarenesstaxonomy}{
+            rankdir=TB;
+            node [shape=box, style="rounded", fontsize=8];
+            
+            a [label="Robot"];
+            b [label="Mind"];
+            c [label="Consciousness"];
+            d [label=<Self<BR/>consciousness>];
+            e [label=<Meta<BR/>Cognition>];
+            f [label=<Self<BR/>awareness>];
+            
+            a -> b -> c -> d -> e -> f;
+        }
+    % \bibliographystyle{plain}
+    % \bibliography{/home/donkarlo/Dropbox/repo/shared_research/bibliography/bibliography.bib}
+\end{document}

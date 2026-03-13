@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+\begin{document}
+    
+    \begin{tikzpicture}
+        \graph [layered layout] {
+            A -> {B, D, E};
+            B -> C;
+            D -> {C, E, F};
+            C -> F;
+            E -> F;
+        };
+    \end{tikzpicture}
+
+\end{document}
